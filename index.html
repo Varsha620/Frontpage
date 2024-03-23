@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    }
+    .brwn_header {
+        background-color: brown;
+        height: 30vh; /* 20% of viewport height */
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 10px rgb(200, 106, 106);
+    }
+    .Headings {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .admin-button, .user-button {
+        width: 200px;
+        height: 200px;
+        margin: 0 1in; /* 1 inch distance between buttons */
+        border: none;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 8px 4px 6px rgba(151, 5, 5, 0.368);
+        transition: transform 0.3s ease;
+    }
+    .admin-button:hover, .user-button:hover {
+        transform: scale(1.1);
+    }
+    .admin-button::before, .user-button::before {
+        content: attr(data-label);
+        display: block;
+        background-color: #b2061d; /* blue color for heading */
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: background-color 0.3s ease;
+    }
+    .admin-button:hover::before, .user-button:hover::before {
+        background-color: #2f35d7; /* darker blue on hover */
+    }
+    .admin-button img, .user-button img {
+        border-radius: 50%; /* circle shape for image */
+        width: 80px;
+        height: 80px;
+        margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="brwn_header">
+        <div class="Headings">
+            <h1 align="center">DEPARTMENT OF INFORMATION TECHNOLOGY</h1>
+            <h2 align="center">IT LIBRARY</h2>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="admin-button" data-label="ADMIN" onclick="window.location.href='user.html'">
+            <img src="man (2).png" alt="Admin Icon">
+        </button>
+        <button class="user-button" data-label="USER" onclick="window.location.href='user.html'">
+            <img src="stud.jpg" alt="User Icon">
+        </button>
+    </div>
+</body>
+</html>
